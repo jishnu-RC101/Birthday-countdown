@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Birthay Countdown</title>
+    </head>
+    <body>
+       <div class="bday">
+          <title>Birthday of</title>Birthday of
+       </div>
+       <div class="name">
+          The Cute Panda
+       </div>
+        <header>
+            <div class="content">
+                <h2>COMING SOON</h2>
+            <div id="clockdiv">
+            <div>
+                <span class="days"></span>
+                <div class="smalltext">Days</div>
+            </div>
+            <div>
+                <span class="hours"></span>
+                <div class="smalltext">Hours</div>
+            </div>
+            <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Seconds</div>
+            </div>
+            </div>
+
+       <div class="wrapper">
+             <div class="img-area">
+                 <div class="single-img img-one">
+                     <img src="https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-0/p526x296/90651367_597982224117314_5206868279771004928_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=730e14&_nc_ohc=mPliK8ysuRoAX98pLOA&_nc_ht=scontent.fccu2-2.fna&tp=6&oh=b54fbbeda850e3db39fc1a50e972be47&oe=607CEA0A" alt="">     
+                 </div> 
+                 <div class="single-img img-two">
+                    <img src="https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/151056427_809955016253366_3555138493513621601_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=Q8-GOrU_vnEAX8ZQR6-&_nc_ht=scontent.fccu2-1.fna&oh=de540e55422c3e3130dc731b762666e5&oe=607E482D" alt="">     
+                </div> 
+                <div class="single-img img-three">
+                    <img src="https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-9/138804393_792189538029914_3786191183965705670_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=pTMKfb1fttUAX8kXQy9&_nc_ht=scontent.fccu2-2.fna&oh=297dad35a879275f6374e27695d641d2&oe=607F568C" alt="">     
+                </div> 
+                <div class="single-img img-four">
+                    <img src="https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/98130114_632568240658712_6598880357364269056_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=vc_I95UditIAX_4oJwS&_nc_ht=scontent.fccu2-1.fna&oh=30017a4a0c66f40118d1f1798fc18c5b&oe=607D56E0" alt="">     
+                </div>
+                <div class="single-img img-five">
+                    <img src="https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/104194547_654298331819036_705010125985792341_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=xK847ysih9oAX_4zaS_&_nc_ht=scontent.fccu2-1.fna&oh=f9ec7dba31ae2d1a500389f0c106b313&oe=607E54C6" alt="">     
+                </div> 
+                <div class="single-img img-six">
+                    <img src="https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-9/160880662_824739631441571_7234626739593842397_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=FtuXw2aTSJ8AX8_De-Q&_nc_ht=scontent.fccu2-2.fna&oh=6f5cbf58c4178ad2de0573ca2e51a5aa&oe=607D1E77" alt="">     
+                </div>  
+             </div>
+       </div>
+       <script src="clock_js.js"></script>
+    </body>
+</html>
+<div id="dvImage" style="height: 308px; width: 410px">
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    var images = ["https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/89246482_589254871656716_2499107526692306944_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=FSMiM5jlA4IAX8YLcaD&_nc_ht=scontent.fccu2-1.fna&oh=57c8a708f3b292b50d4f7f2ff74d46c2&oe=607D900A", "https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-9/96749648_626416737940529_4681887894535667712_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=g4SqBGZdalAAX-3VZ4L&_nc_ht=scontent.fccu2-2.fna&oh=322e694cdf08409e3db53d5fd60aa0e9&oe=607EED43", "Hydrangeas.jpg", "Jellyfish.jpg", "Koala.jpg", "Lighthouse.jpg", "Penguins.jpg", "Tulips.jpg"];
+    $(function () {
+        var i = 0;
+        $("#dvImage").css("background-image", "url(images/" + images[i] + ")");
+        setInterval(function () {
+            i++;
+            if (i == images.length) {
+                i = 0;
+            }
+            $("#dvImage").fadeOut("slow", function () {
+                $(this).css("background-image", "url(images/" + images[i] + ")");
+                $(this).fadeIn("slow");
+            });
+        }, 5000);
+    });
+</script>

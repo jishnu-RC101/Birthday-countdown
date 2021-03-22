@@ -1,0 +1,226 @@
+@keyframes bgcolor {
+    0% {
+        background-image: url("https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/89246482_589254871656716_2499107526692306944_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=FSMiM5jlA4IAX8YLcaD&_nc_ht=scontent.fccu2-1.fna&oh=57c8a708f3b292b50d4f7f2ff74d46c2&oe=607D900A"); 
+        height: 100%;
+        background-size: cover;
+        backdrop-filter:blur(8px);
+    }
+
+    30% {
+        background-image: url("https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-9/96749648_626416737940529_4681887894535667712_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=g4SqBGZdalAAX-3VZ4L&_nc_ht=scontent.fccu2-2.fna&oh=322e694cdf08409e3db53d5fd60aa0e9&oe=607EED43"); 
+        height: 100%;
+        background-size: cover;
+        backdrop-filter:blur(8px);
+    }
+
+    60% {
+        background-image: url("https://scontent.fccu2-2.fna.fbcdn.net/v/t1.0-9/94882405_620447795204090_1922642500896423936_o.jpg?_nc_cat=103&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=lfQ-xLFYX5AAX-WhKXE&_nc_ht=scontent.fccu2-2.fna&oh=80d99f9b1d8891de36176dfc11ab8830&oe=607EA1FB"); 
+        height: 100%;
+        background-size: cover;
+        backdrop-filter:blur(8px);
+    }
+
+    90% {
+        background-image: url("https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/104112423_654298548485681_6271135820667775282_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=nb6-29-lS10AX8YuDrM&_nc_ht=scontent.fccu2-1.fna&oh=483b29406e3158eb9a734043d72382c9&oe=607EF280"); 
+        height: 100%;
+        background-size: cover;
+        backdrop-filter:blur(8px);
+    }
+
+    100% {
+        background-image: url("https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/150974012_810239932891541_7834479486031849195_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=b0EbC9rQIRYAX_OmfHs&_nc_ht=scontent.fccu2-1.fna&oh=09b85503e82abef5722bb012c7b8bf15&oe=607ED5E7"); 
+        height: 100%;
+        background-size: cover;
+        backdrop-filter:blur(8px);
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+/* body{
+    margin: 0;
+    padding: 0;
+    background: #6e6a88;
+    background-image: url("https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/89246482_589254871656716_2499107526692306944_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=FSMiM5jlA4IAX8YLcaD&_nc_ht=scontent.fccu2-1.fna&oh=57c8a708f3b292b50d4f7f2ff74d46c2&oe=607D900A"); 
+    height: 100%; */
+    
+  /* Center and scale the image nicely */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter:blur(8px);
+  
+} */
+
+.bday{
+margin-top: 10px;
+text-align: center;
+background: linear-gradient(180deg, #00f5e9 0%, #0344f7 110%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+cursor: pointer;
+font-size: 50px;
+font-family: bday;
+}
+
+.name{
+padding-right: 100px;
+margin-left: 380px;
+    margin-top: 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #f80112 0%, #2602f5 110%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-size: 70px;
+    font-family: bday;
+    display: inline-block;
+}
+.name:hover{
+-webkit-box-reflect: below -8px -webkit-gradient(linear, right top, right bottom, from(transparent),
+ color-stop(85%, transparent), to(rgba(42, 99, 99, 1))) ;
+}
+.wrapper{
+position: relative;
+width: 320px;
+margin: 150px auto;
+perspective: 1000px;
+margin-bottom: 500px;
+}
+.img-area{
+position: absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transform: rotateY(-360deg) translateZ(-300px);
+animation: animate 25s steps(1000, end) infinite;
+}
+.single-img{
+position: absolute;
+width: 300px;
+height: 200px;
+top: 10px;
+left: 10px;
+}
+.single-img img{
+width: 300px;
+height: 200px;
+border: 5px solid #fff;
+}
+.single-img.img-one{
+transform: rotateY(0deg) translateZ(300px);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+    }
+.single-img.img-three{
+        transform: rotateY(120deg) translateZ(300px);
+        }
+.single-img.img-four{
+transform: rotateY(180deg) translateZ(300px);
+}
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+    }
+.single-img.img-six{
+        transform: rotateY(300deg) translateZ(300px);
+        }
+        h1{
+        color: #396;
+        font-weight: 100;
+        font-size: 40px;
+        margin: 40px 0px 20px;
+      }
+        #clockdiv{
+          font-family: sans-serif;
+          color: #fff;
+          display: inline-block;
+          font-weight: 100;
+          text-align: center;
+          font-size: 70px;
+        }
+        #clockdiv:hover
+        {
+          /* background-color:#fff; */
+          color:#000;
+          transition: 0.6s ease; 
+        }
+        #clockdiv > div{
+          padding: 10px;
+          border-radius: 3px;
+          background: #00BF96;
+          justify-content: center;
+          align-items: center;
+          display: inline-block;
+        }
+        
+        #clockdiv div > span{
+          padding: 15px;
+          border-radius: 3px;
+          background: #00816A;
+          justify-content: center;
+          align-items: center;
+          display: inline-block;
+        }
+        
+        .smalltext{
+          padding-top: 5px;
+          font-size: 20px;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 30vh;
+        }
+            
+          
+          header:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            /* background-color: rgba(34, 34, 34, 0.5); */
+          }
+          header .content {
+            position: relative;
+            z-index: 1;
+          }
+          header .content h2 {
+            color: #FFF;
+            font-size: 42px;
+            font-weight: 900;
+            margin: 30px 0px;
+          }
+
+img{
+filter: grayscale(90%);
+transition: 1s;
+cursor: pointer;
+}
+img:hover{
+transition: 1s;
+filter: grayscale(0);
+}
+@keyframes animate{
+from{
+transform: rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+@font-face{
+font-family: bday;
+src: url(bday.ttf);
+}
